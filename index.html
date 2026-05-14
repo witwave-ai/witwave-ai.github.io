@@ -16,6 +16,37 @@
     <meta name="twitter:title" content="witwave | Agent-native engineering" />
     <meta name="twitter:description" content="witwave is a cloud-native autonomous agent framework for AI agent teams, Kubernetes-native orchestration, MCP tools, memory, and governed agent-native engineering." />
     <meta name="twitter:image" content="https://witwave.ai/assets/images/witwave-social-preview.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://witwave.ai/#organization",
+            "name": "witwave",
+            "url": "https://witwave.ai/",
+            "logo": "https://witwave.ai/assets/images/witwave-logo-terminal.svg",
+            "sameAs": ["https://github.com/witwave-ai"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://witwave.ai/#website",
+            "url": "https://witwave.ai/",
+            "name": "witwave",
+            "description": "A cloud-native autonomous agent framework for AI agent teams.",
+            "publisher": { "@id": "https://witwave.ai/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://witwave.ai/#webpage",
+            "url": "https://witwave.ai/",
+            "name": "witwave | Agent-native engineering",
+            "description": "witwave is a cloud-native autonomous agent framework for AI agent teams, Kubernetes-native orchestration, MCP tools, memory, and governed agent-native engineering.",
+            "isPartOf": { "@id": "https://witwave.ai/#website" }
+          }
+        ]
+      }
+    </script>
     <link rel="icon" href="assets/images/witwave-logo-terminal.svg" />
     <link rel="stylesheet" href="assets/styles.css?v=copy-icon-only-20260514" />
   </head>
@@ -86,7 +117,7 @@
             Driven -> Delegated -> Native. A framework for understanding how agents create value in existing
             lifecycles, and what changes when teams integrate them into the SDLC.
           </p>
-          <a href="reader/?paper=three-phases-of-ai-adoption">Read the paper</a>
+          <a href="whitepapers/three-phases-of-ai-adoption/">Read the paper</a>
         </article>
 
         <article class="paper-card" id="agentic-team">
@@ -96,7 +127,7 @@
             A practical model for specialized AI agents, coordination, memory, process improvement, and the human role
             in an agent-native operating model.
           </p>
-          <a href="reader/?paper=anatomy-of-an-agentic-team">Read the paper</a>
+          <a href="whitepapers/anatomy-of-an-agentic-team/">Read the paper</a>
         </article>
       </section>
 
