@@ -1,0 +1,343 @@
+<!doctype html>
+<!--
+  GENERATED FILE: Do not edit this HTML directly.
+  Update the Markdown source or content manifest in the Witwave repository, then republish.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Autonomy Boundary | Witwave</title>
+    <meta name="description" content="A standalone draft on the shift from commanded AI assistants to governed autonomous agents." />
+    <link rel="canonical" href="https://witwave.ai/whitepapers/the-autonomy-boundary/" />
+    <meta property="og:site_name" content="Witwave" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The Autonomy Boundary | Witwave" />
+    <meta property="og:description" content="A standalone draft on the shift from commanded AI assistants to governed autonomous agents." />
+    <meta property="og:url" content="https://witwave.ai/whitepapers/the-autonomy-boundary/" />
+    <meta property="og:image" content="https://witwave.ai/assets/images/witwave-social-preview.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:alt" content="Witwave logo over a dark, high-tech interface background." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Autonomy Boundary | Witwave" />
+    <meta name="twitter:description" content="A standalone draft on the shift from commanded AI assistants to governed autonomous agents." />
+    <meta name="twitter:image" content="https://witwave.ai/assets/images/witwave-social-preview.png" />
+    <meta name="twitter:image:alt" content="Witwave logo over a dark, high-tech interface background." />
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+            {
+                  "@type": "Article",
+                  "@id": "https://witwave.ai/whitepapers/the-autonomy-boundary/#article",
+                  "headline": "The Autonomy Boundary",
+                  "description": "A standalone draft on the shift from commanded AI assistants to governed autonomous agents.",
+                  "url": "https://witwave.ai/whitepapers/the-autonomy-boundary/",
+                  "image": "https://witwave.ai/assets/images/witwave-social-preview.png",
+                  "author": {
+                        "@type": "Organization",
+                        "name": "Witwave"
+                  },
+                  "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://witwave.ai/#organization",
+                        "name": "Witwave",
+                        "url": "https://witwave.ai/",
+                        "logo": "https://witwave.ai/assets/images/witwave-logo-terminal.svg",
+                        "sameAs": [
+                              "https://github.com/witwave-ai"
+                        ]
+                  },
+                  "dateModified": "2026-05-21",
+                  "mainEntityOfPage": "https://witwave.ai/whitepapers/the-autonomy-boundary/"
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Home",
+                              "item": "https://witwave.ai/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Whitepapers",
+                              "item": "https://witwave.ai/whitepapers/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 3,
+                              "name": "The Autonomy Boundary",
+                              "item": "https://witwave.ai/whitepapers/the-autonomy-boundary/"
+                        }
+                  ]
+            }
+      ]
+}
+    </script>
+    <link rel="alternate" type="application/rss+xml" title="Witwave field notes" href="https://witwave.ai/feed.xml" />
+    <link rel="icon" href="../../assets/images/witwave-logo-terminal.svg" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=whitepaper-actions-20260521" />
+  </head>
+  <body class="reader-page generated-page">
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="Witwave home">
+        <img class="brand-logo" src="../../assets/images/witwave-logo-terminal.svg" alt="" aria-hidden="true" />
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../../project/">Project</a>
+          <a href="../../whitepapers/">Whitepapers</a>
+          <a href="../../team/">Team</a>
+          <a href="../../blog/">Blog</a>
+        </nav>
+        <a class="header-cta" href="../../quickstart/">Quick Start</a>
+      </div>
+    </header>
+
+    <main>
+
+      <article class="markdown-paper generated-article">
+        <div class="reader-actions generated-actions">
+          <a class="button primary" href="../">All whitepapers</a>
+          <a class="button secondary" href="../../whitepapers/the-autonomy-boundary/the-autonomy-boundary.pdf" download="the-autonomy-boundary.pdf">Download PDF</a>
+        </div>
+        <p class="article-status">draft</p>
+        <h1 id="the-autonomy-boundary">The Autonomy Boundary</h1>
+<blockquote><p>What separates a directed AI assistant from an autonomous agent — and why autonomous agents are governed, not merely commanded.</p></blockquote>
+<hr />
+<h2 id="executive-summary">Executive summary</h2>
+<p>The word &quot;agent&quot; is becoming too broad to be useful by itself. A chatbot can be called an agent. A coding assistant in an IDE can be called an agent. A scheduled automation that calls a model can be called an agent. A durable worker that wakes up, observes a system, decides what matters, coordinates with peers, and acts through tools can also be called an agent.</p>
+<p>Those systems are not the same.</p>
+<p>The practical distinction is not whether an LLM is involved. It is not whether the system can call tools. It is not even whether the system can complete a task. The distinction is the control relationship between the human, the runtime, and the agent.</p>
+<p><strong>Directed agents are commanded. Autonomous agents are governed.</strong></p>
+<p>A directed agent works when a human drives it: prompt by prompt, session by session, task by task. The human supplies the immediate intent, watches the work, decides when to continue, and usually remains close to the steering wheel.</p>
+<p>An autonomous agent operates under durable governance. Humans still matter, but their role changes. They define the agent&#039;s purpose, authority, tools, schedules, constraints, memory policy, escalation paths, and observability. The agent can then wake up through time, events, or messages; inspect its environment; decide whether action is needed; communicate with humans or peers; and act within bounded authority.</p>
+<p>This paper argues that autonomy is not a mystical property of intelligence. It is an architectural and operating-model property. An autonomous agent needs at least four surfaces:</p>
+<ul><li><strong>Addressability.</strong> A human or another agent can reach it through a stable communication interface.</li><li><strong>Activation.</strong> It can be invoked by something other than an immediate human prompt: time, events, messages, jobs, or webhooks.</li><li><strong>Discretion.</strong> It can decide what to do within a delegated role and policy boundary.</li><li><strong>Accountability.</strong> Its actions are constrained, observable, attributable, auditable, and reversible where possible.</li></ul>
+<p>A heartbeat, cron schedule, or webhook is therefore important, but insufficient. Those mechanisms give an agent a pulse. They do not, by themselves, make it autonomous. Autonomy appears when the pulse is connected to goals, state, tools, communication, and governance.</p>
+<p>The goal is not to remove humans. The goal is to move human control out of the immediate command loop and into the system around the agent.</p>
+<p>The framing is intentionally vendor-neutral. It does not depend on a specific model provider, agent framework, orchestration platform, or protocol. Protocols, runtimes, and tools can support autonomy, but the boundary is the operating model: whether the agent is continuously directed or durably governed.</p>
+<hr />
+<h2 id="the-confusion">The confusion</h2>
+<p>Agent language is overloaded because several different transitions are happening at once.</p>
+<p>First, models became capable enough to reason through multi-step tasks. Then tool use gave those models ways to affect systems outside the chat window. Then coding environments, browsers, APIs, MCP servers, and workflow systems gave those models richer action surfaces. Then teams started wiring agents into persistent runtimes: scheduled jobs, background workers, webhooks, event streams, task queues, memory stores, and agent-to-agent communication.</p>
+<p>Each step made agents feel more autonomous. But each step is different.</p>
+<p>A model that can reason is not automatically an autonomous agent. A tool-using assistant is not automatically an autonomous agent. A scheduled model call is not automatically an autonomous agent. A multi-agent chat is not automatically an autonomous agent team.</p>
+<p>The useful question is narrower:</p>
+<blockquote><p>Does the system require continuous human command, or can it operate under durable governance?</p></blockquote>
+<p>That question keeps the definition practical. It also avoids two common mistakes.</p>
+<p>The first mistake is treating autonomy as a binary. In practice, autonomy is a gradient. An agent may be autonomous for low-risk observation, semi-autonomous for routine remediation, and human-gated for irreversible changes.</p>
+<p>The second mistake is treating autonomy as the absence of control. That is backwards. Useful autonomy depends on more control, not less. The control simply moves from constant instruction to durable governance.</p>
+<hr />
+<h2 id="the-old-definition-still-helps">The old definition still helps</h2>
+<p>The distinction is not new. Agent research has wrestled with the boundary between an agent and an ordinary program for decades.</p>
+<p>Wooldridge and Jennings described a widely used &quot;weak notion&quot; of agency: autonomy, social ability, reactivity, and pro-activeness. That framing still maps well to modern LLM agents:</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Classic property</th><th>Modern runtime question</th></tr></thead>
+        <tbody>
+          <tr><td>Autonomy</td><td>Can the system control some of its actions and internal state without direct human intervention?</td></tr><tr><td>Social ability</td><td>Can it communicate with humans or other agents through a shared protocol?</td></tr><tr><td>Reactivity</td><td>Can it perceive changes in its environment and respond in time?</td></tr><tr><td>Pro-activeness</td><td>Can it take initiative toward a goal rather than only answering a direct prompt?</td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>Franklin and Graesser offered another useful lens: an autonomous agent is situated in an environment, senses that environment, acts on it over time, and does so in pursuit of an agenda. That definition is broad enough to include many systems, but the key phrase for software agents is <strong>over time</strong>. A one-shot model call can be useful. A session-bound assistant can be powerful. But autonomy becomes much more credible when the system persists across time and can change what it later observes.</p>
+<p>Modern LLM-agent literature updates the vocabulary. Surveys of LLM-based autonomous agents tend to emphasize planning, memory, tool use, action, environment interaction, and evaluation. NIST&#039;s security work describes AI agent systems as systems capable of planning and taking autonomous actions that affect real systems or environments, and it calls out the importance of tool permissions, monitoring, access patterns, and autonomy as dimensions of agent risk.</p>
+<p>The old and new framings converge on the same practical point:</p>
+<blockquote><p>An autonomous agent is not merely intelligent. It is situated, activated, persistent, communicative, and able to act within some boundary of discretion.</p></blockquote>
+<hr />
+<h2 id="commanded-versus-governed">Commanded versus governed</h2>
+<p>The commanded/governed distinction is the cleanest way to separate directed agents from autonomous ones.</p>
+<h3 id="commanded-agents">Commanded agents</h3>
+<p>A commanded agent is driven by direct human instruction. It may still be powerful. It may inspect files, call tools, run tests, edit code, browse the web, summarize logs, or reason through a plan. But the human remains the primary scheduler, router, and controller.</p>
+<p>The human decides:</p>
+<ul><li>When the agent starts.</li><li>What the immediate task is.</li><li>Which context matters.</li><li>Whether the next action is worth taking.</li><li>When the work should stop.</li><li>Whether another agent should be involved.</li><li>Whether the output is acceptable.</li></ul>
+<p>This is the dominant experience of many IDE, CLI, editor, and chat-based agents. The agent can be highly capable, but it is mostly session-bound and human-steered.</p>
+<h3 id="governed-agents">Governed agents</h3>
+<p>A governed autonomous agent is not free to do anything it wants. It is free to operate inside a defined role.</p>
+<p>The human or organization defines:</p>
+<ul><li>The agent&#039;s identity and purpose.</li><li>The systems it can observe.</li><li>The tools it can use.</li><li>The schedules or events that activate it.</li><li>The policies that constrain it.</li><li>The memory it can read and write.</li><li>The peers it can contact.</li><li>The actions it can take without approval.</li><li>The actions that require escalation.</li><li>The logs, traces, and evidence it must leave behind.</li></ul>
+<p>The human is still in control, but not by typing every command. Control has moved into governance surfaces.</p>
+<p>That shift is the autonomy boundary.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Dimension</th><th>Commanded / directed agent</th><th>Governed / autonomous agent</th></tr></thead>
+        <tbody>
+          <tr><td>Start signal</td><td>Human prompt</td><td>Human prompt, schedule, heartbeat, webhook, event, or peer</td></tr><tr><td>Control model</td><td>Human steers the immediate loop</td><td>Human defines durable policy and boundaries</td></tr><tr><td>Scope</td><td>Session or task</td><td>Role, responsibility, or operating domain</td></tr><tr><td>State</td><td>Often ephemeral or session-local</td><td>Persistent memory, logs, task state, and decision history</td></tr><tr><td>Communication</td><td>Mostly human-agent</td><td>Human-agent and agent-agent</td></tr><tr><td>Action</td><td>Human closely approves or directs</td><td>Agent acts within bounded authority</td></tr><tr><td>Accountability</td><td>Transcript or local history</td><td>Identity, audit trail, trace, policy, and escalation record</td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>This does not mean commanded agents are inferior. Commanded agents are often exactly what a person wants. They are appropriate when work is exploratory, high-risk, ambiguous, or tightly coupled to human taste. The claim is narrower: commanded agents and autonomous agents should not be described as if they have the same operating model.</p>
+<hr />
+<h2 id="the-pulse-is-necessary-but-not-sufficient">The pulse is necessary, but not sufficient</h2>
+<p>A pulse is one of the most visible signs of autonomy.</p>
+<p>A heartbeat loop, cron schedule, task runner, or recurring job lets an agent wake up without a human typing a prompt. That matters. It changes the agent from a passive respondent into a durable participant in a system.</p>
+<p>But a pulse alone is not autonomy. A shell script can run every five minutes. A CI job can run on a schedule. A database backup can run nightly. Those systems are automated, but not necessarily autonomous in the agentic sense.</p>
+<p>The pulse becomes agentic when it starts a loop like this:</p>
+<ol><li>Wake up.</li><li>Read current state.</li><li>Compare state to goals, role, policy, and memory.</li><li>Decide whether action is needed.</li><li>Choose an action or decide not to act.</li><li>Use tools within permission boundaries.</li><li>Record what happened.</li><li>Communicate if needed.</li><li>Escalate if policy or uncertainty requires it.</li></ol>
+<p>The key is discretion. The agent is not merely executing a predetermined script. It is evaluating a changing environment and selecting actions within a governed role.</p>
+<p>This is why heartbeat, cron, scheduled jobs, and webhooks should be treated as <strong>activation surfaces</strong>. They are the nervous system&#039;s incoming signals. They create opportunities for autonomy, but they do not define autonomy on their own.</p>
+<hr />
+<h2 id="the-minimum-autonomy-stack">The minimum autonomy stack</h2>
+<p>A practical autonomous agent needs a stack of capabilities. Not every agent needs every capability at maximum strength, but the absence of any layer weakens the autonomy claim.</p>
+<h3 id="1-addressability">1. Addressability</h3>
+<p>An autonomous agent needs a stable way to be reached.</p>
+<p>For human-agent interaction, this can be a chat interface, command-line call, HTTP API, dashboard, or task endpoint. For agent-agent interaction, it should be structured enough that agents can discover capabilities, exchange messages, route work, and manage tasks without sharing private implementation details.</p>
+<p>This is where protocols such as A2A matter. A2A is not what makes an agent autonomous, but it provides an important communication substrate: discovery, capability negotiation, task management, and secure information exchange between independent agents.</p>
+<p>Without addressability, the agent is not really a participant. It is an implementation detail.</p>
+<h3 id="2-activation">2. Activation</h3>
+<p>An autonomous agent needs a way to start work that is not limited to an immediate human prompt.</p>
+<p>Common activation surfaces include:</p>
+<ul><li>Heartbeats.</li><li>Cron-like schedules.</li><li>Calendar tasks.</li><li>Event streams.</li><li>Webhooks.</li><li>Queue messages.</li><li>A2A messages from humans or peer agents.</li><li>Completion events from previous jobs or continuations.</li></ul>
+<p>Activation is the difference between &quot;I can ask it to do something&quot; and &quot;it can notice when work may need to happen.&quot;</p>
+<h3 id="3-observation">3. Observation</h3>
+<p>An autonomous agent needs access to enough state to decide whether action is needed.</p>
+<p>Observation may include:</p>
+<ul><li>Repository state.</li><li>Logs.</li><li>Metrics.</li><li>Kubernetes objects.</li><li>CI results.</li><li>Issue or discussion activity.</li><li>Prior decisions.</li><li>Memory files.</li><li>External events.</li><li>Messages from other agents.</li></ul>
+<p>Observation should be scoped. An agent does not need omniscience. It needs the state required for its role.</p>
+<h3 id="4-interpretation-and-discretion">4. Interpretation and discretion</h3>
+<p>The agent must be able to interpret what it observes and decide what to do.</p>
+<p>This is the point where autonomy differs from ordinary automation. A conventional job usually follows a predetermined path. An autonomous agent evaluates the situation, reasons about goals, applies policy, and chooses among possible actions — including doing nothing.</p>
+<p>Doing nothing is important. A reliable autonomous agent must be allowed to conclude that no action is warranted. Otherwise it becomes a noisy automation loop that creates work simply because it woke up.</p>
+<h3 id="5-action">5. Action</h3>
+<p>An autonomous agent needs tools that let it affect its environment.</p>
+<p>The action layer may be read-only, write-capable, or mixed. A reliability observer might inspect service health, logs, metrics, and events, then report anomalies. A release agent might create tags or publish artifacts. A documentation agent might edit markdown and open a change. A remediation agent might restart a service or roll back a deployment.</p>
+<p>The important point is that action should be explicit, permissioned, and observable.</p>
+<p>Tool access is also where risk rises. NIST&#039;s tool-use taxonomy is useful here because it separates functionality, access patterns, risk, reliability, modality, monitoring, and autonomy. A read-only diagnostic tool has a different risk profile than a write-capable tool that can affect production state.</p>
+<h3 id="6-continuity">6. Continuity</h3>
+<p>An autonomous agent needs continuity across activations.</p>
+<p>Continuity does not require perfect memory. It does require enough persistent state that the agent can avoid starting from zero every time it wakes up.</p>
+<p>Useful continuity surfaces include:</p>
+<ul><li>Conversation logs.</li><li>Session state.</li><li>Memory files.</li><li>Decision logs.</li><li>Task stores.</li><li>Prior tool-call records.</li><li>Escalation history.</li><li>Agent-specific notes.</li><li>Shared team memory.</li></ul>
+<p>Without continuity, a scheduled agent is just a recurring amnesiac. It may still be useful, but its autonomy is shallow.</p>
+<h3 id="7-communication">7. Communication</h3>
+<p>Autonomy is not isolation. A useful autonomous agent must communicate.</p>
+<p>At minimum, a human should be able to reach the agent, ask what it is doing, and provide new direction. In multi-agent systems, peer agents also need a way to request work, transfer context, ask for status, raise blockers, and coordinate handoffs.</p>
+<p>This is where social ability becomes operational. A single autonomous agent can act within a role. A group of autonomous agents can divide work, cross-check each other, route exceptions, and maintain shared state.</p>
+<h3 id="8-governance">8. Governance</h3>
+<p>Governance is the layer that makes autonomy safe enough to use.</p>
+<p>Governance includes:</p>
+<ul><li>Identity.</li><li>Authentication.</li><li>Authorization.</li><li>Tool permissions.</li><li>Scheduling rules.</li><li>Scope boundaries.</li><li>Human approval gates.</li><li>Escalation rules.</li><li>Audit logs.</li><li>Traceability.</li><li>Rollback paths.</li><li>Cost controls.</li><li>Memory policy.</li><li>Data boundaries.</li><li>Revocation.</li></ul>
+<p>This is the part that is easy to understate. A system can be autonomous and reckless. That is not the goal. The goal is governed autonomy: agents that can take initiative without escaping accountability.</p>
+<hr />
+<h2 id="a-simple-autonomy-test">A simple autonomy test</h2>
+<p>A system is meaningfully autonomous when the answer to most of these questions is yes:</p>
+<ol><li><strong>Can it be addressed?</strong> Can a human or peer agent reach it through a stable interface?</li><li><strong>Can it wake up?</strong> Can time, events, messages, or schedules activate it without a human prompt?</li><li><strong>Can it observe?</strong> Can it read enough current state to understand whether action is needed?</li><li><strong>Can it choose?</strong> Can it decide among actions, including no action, within a role?</li><li><strong>Can it act?</strong> Can it use tools to affect the environment within explicit permissions?</li><li><strong>Can it remember?</strong> Can it carry relevant context across activations?</li><li><strong>Can it communicate?</strong> Can it report, ask, delegate, escalate, or coordinate?</li><li><strong>Can it be governed?</strong> Can its authority be constrained, monitored, audited, and revoked?</li></ol>
+<p>A chatbot may satisfy the first question. A coding assistant may satisfy several. A scheduled automation may satisfy the second. A workflow engine may satisfy activation and action but not interpretation. A durable autonomous agent should satisfy all eight at least within its operating domain.</p>
+<p>The test does not require broad authority. A read-only observer can be autonomous if it wakes up, inspects state, judges anomalies, records evidence, communicates findings, and escalates issues according to policy. A write-capable remediation agent may be less autonomous in practice if every action is manually commanded.</p>
+<p>Autonomy is therefore not the same as write access. Autonomy is the capacity to operate under governance.</p>
+<hr />
+<h2 id="examples">Examples</h2>
+<h3 id="the-commanded-coding-assistant">The commanded coding assistant</h3>
+<p>A developer opens an IDE agent and asks it to fix a failing test. The agent reads files, proposes changes, edits code, runs tests, and explains the result.</p>
+<p>This is agentic. It is not strongly autonomous.</p>
+<p>The human initiated the work, scoped the task, watched the loop, decided which suggestions to accept, and ended the session. The agent had tools and reasoning, but the human remained the scheduler and controller.</p>
+<h3 id="the-scheduled-report-generator">The scheduled report generator</h3>
+<p>A workflow runs every Monday morning. It calls a model, summarizes recent activity, and emails a report.</p>
+<p>This has activation, but limited autonomy.</p>
+<p>If the workflow simply follows a fixed script, it is automation with model assistance. It becomes more autonomous if it can decide what changed, identify anomalies, ask follow-up questions, select sources, delay publication when confidence is low, and record why it made those choices.</p>
+<h3 id="the-reliability-observer">The reliability observer</h3>
+<p>A reliability agent wakes up every few minutes. It inspects service restarts, deployment events, recent logs, metrics, and other operational signals. It compares the current snapshot to prior snapshots. If the pattern looks systemic, it writes an incident note and sends a concise report to a coordinator. If the pattern is benign, it records the observation and takes no action.</p>
+<p>This can be autonomous even if it has no write access.</p>
+<p>The autonomy comes from durable activation, observation, judgment, continuity, communication, and escalation. Write access may come later, but it is not the essence.</p>
+<h3 id="the-autonomous-team">The autonomous team</h3>
+<p>A group of agents each owns a role: coordination, release, reliability, documentation, implementation, security review, public communication. Each agent has a stable identity, memory, tools, and communication surface. The coordinator can ask peers for work. Peers can report status or blockers. Some agents wake on schedules. Some react to events. Some act only when asked. Humans govern the system through policy, permissions, schedules, budgets, and escalation paths.</p>
+<p>This is not merely a collection of agents. It is a governed multi-agent operating model.</p>
+<hr />
+<h2 id="why-a2a-matters-but-is-not-enough">Why A2A matters, but is not enough</h2>
+<p>Agent-to-agent communication is a necessary part of many autonomous systems, especially teams. But communication alone is not autonomy.</p>
+<p>A2A gives independent agents a shared language for discovery, capability negotiation, task management, and information exchange. That matters because autonomous agents should not need to share internal memory, tools, implementation, or vendor-specific runtime details in order to collaborate.</p>
+<p>The minimum communication requirement is simple:</p>
+<ul><li>A human can reach the agent.</li><li>Another agent can reach the agent.</li><li>The caller can discover what the agent is for.</li><li>The agent can accept, reject, clarify, or complete work.</li><li>The interaction can be traced and audited.</li></ul>
+<p>That gives the agent a social surface. It does not give the agent a pulse, memory, tools, or governance. Those have to come from the runtime around it.</p>
+<p>In other words: A2A makes an agent reachable. Governance and activation make it operationally autonomous.</p>
+<hr />
+<h2 id="why-mcp-matters-but-is-not-enough">Why MCP matters, but is not enough</h2>
+<p>MCP belongs in the autonomy discussion because tools are how agents act beyond text.</p>
+<p>A model that can only produce text may still be useful, but its effect on the world is mediated by a human. A model that can call tools can inspect files, query systems, run tests, create tickets, post messages, execute code, or change infrastructure. That tool layer is what turns reasoning into action.</p>
+<p>MCP is valuable because it standardizes how AI applications connect to external systems, tools, data sources, and workflows. But, again, the protocol is not the autonomy boundary. A manually commanded assistant can use MCP. An autonomous agent can use MCP. A dangerous agent can use MCP. A governed agent can use MCP.</p>
+<p>The autonomy question is not &quot;Does it have MCP?&quot; The autonomy question is:</p>
+<blockquote><p>Under what conditions may the agent decide to use the tool, what may it do with the result, and who can observe or revoke that authority?</p></blockquote>
+<p>Tool use makes autonomy consequential. Governance makes it tolerable.</p>
+<hr />
+<h2 id="autonomy-changes-the-risk-model">Autonomy changes the risk model</h2>
+<p>Autonomy is powerful because it moves work out of the immediate human command loop. That is also why it changes the risk model.</p>
+<p>A commanded agent can still make mistakes, but the human is usually near the loop. An autonomous agent may act at night, act repeatedly, act after reading adversarial input, act through write-capable tools, or coordinate with other agents. The system therefore needs stronger controls around identity, authority, observation, and escalation.</p>
+<p>NIST&#039;s agent security work is useful because it does not treat agents as merely chat interfaces. It focuses on the risks that arise when AI model outputs are combined with software functionality. Its tool-use taxonomy also highlights questions every autonomous-agent deployment should ask:</p>
+<ul><li>What action does the tool enable?</li><li>Does the tool have read or write permissions?</li><li>Is the environment trusted or untrusted?</li><li>Are the effects reversible?</li><li>Can the action be monitored?</li><li>How much discretion does the agent have in using the tool?</li></ul>
+<p>Those questions are governance questions. They are also autonomy questions. The more discretion the agent has, the more important the surrounding governance becomes.</p>
+<p>A safe autonomy model does not ask, &quot;How do we let the agent do everything?&quot; It asks:</p>
+<blockquote><p>What decisions can this agent safely make without immediate human command, and what evidence must it leave behind?</p></blockquote>
+<hr />
+<h2 id="the-autonomy-gradient">The autonomy gradient</h2>
+<p>Autonomy is easier to reason about as a gradient than as a yes/no label.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Level</th><th>Name</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Tool</td><td>A function, API, script, or model call that does not decide when to run.</td></tr><tr><td>1</td><td>Commanded assistant</td><td>A human drives a model or agent through a session.</td></tr><tr><td>2</td><td>Delegated task agent</td><td>A human assigns bounded work and the agent completes it asynchronously.</td></tr><tr><td>3</td><td>Event-activated agent</td><td>The agent wakes on schedules, events, messages, or webhooks.</td></tr><tr><td>4</td><td>Governed autonomous agent</td><td>The agent observes, decides, acts, remembers, communicates, and escalates.</td></tr><tr><td>5</td><td>Governed autonomous team</td><td>Multiple autonomous agents coordinate through roles, protocols, and shared state.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>The important leap is not from level 0 to level 1. Many teams already use powerful commanded assistants. The important leap is from direct command to governed operation.</p>
+<p>That leap requires architecture: activation surfaces, communication protocols, tool boundaries, memory, identity, permissions, logs, and policies.</p>
+<p>It also requires organizational maturity. Someone has to decide what the agent is allowed to decide.</p>
+<hr />
+<h2 id="design-principles-for-governed-autonomy">Design principles for governed autonomy</h2>
+<p>Any system that hosts autonomous agents should optimize for governed discretion, not raw freedom.</p>
+<h3 id="1-make-activation-explicit">1. Make activation explicit</h3>
+<p>Every autonomous wake-up path should be visible: heartbeat, cron, task schedule, webhook, queue, A2A request, or continuation. If the agent can wake up, operators should know why.</p>
+<h3 id="2-separate-observation-from-authority">2. Separate observation from authority</h3>
+<p>Reading the world and changing the world should be distinct permissions. Many useful autonomous agents should start as read-only observers.</p>
+<h3 id="3-treat-doing-nothing-as-a-valid-action">3. Treat doing nothing as a valid action</h3>
+<p>An autonomous agent that acts every time it wakes up is likely to create noise. A mature agent records why it chose not to act.</p>
+<h3 id="4-scope-tools-to-roles">4. Scope tools to roles</h3>
+<p>Tools should match responsibilities. A documentation agent does not need production write access. A release agent does not need unrestricted cloud-admin authority. A reliability observer may need broad read access before it needs any write access.</p>
+<h3 id="5-make-communication-protocol-based">5. Make communication protocol-based</h3>
+<p>Humans and agents should be able to reach an agent through stable interfaces. Peer agents should not need private implementation knowledge to collaborate.</p>
+<h3 id="6-persist-operational-memory">6. Persist operational memory</h3>
+<p>If the agent can wake up later, it needs to know what happened earlier. Memory should be useful, inspectable, and governed.</p>
+<h3 id="7-require-evidence">7. Require evidence</h3>
+<p>Autonomous action should leave a trail: what triggered the agent, what it observed, what policy applied, what it did, what tools it used, and why escalation was or was not required.</p>
+<h3 id="8-design-for-revocation">8. Design for revocation</h3>
+<p>An autonomous agent&#039;s permissions, schedule, tools, memory access, and communication surfaces should be easy to pause, reduce, or remove.</p>
+<hr />
+<h2 id="what-autonomy-is-not">What autonomy is not</h2>
+<p>Autonomy is not unlimited authority.</p>
+<p>Autonomy is not a model quality score.</p>
+<p>Autonomy is not the presence of a tool call.</p>
+<p>Autonomy is not a cron job.</p>
+<p>Autonomy is not a webhook.</p>
+<p>Autonomy is not A2A.</p>
+<p>Autonomy is not MCP.</p>
+<p>Each of those can support autonomy. None of them defines it.</p>
+<p>The defining move is the shift from immediate command to governed operation over time.</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The next useful boundary in agentic systems is not &quot;agent versus non-agent.&quot; That boundary has become too blurry. The more useful boundary is <strong>directed versus autonomous</strong>.</p>
+<p>A directed agent is commanded. It can be powerful, creative, and valuable, but the human remains close to the execution loop.</p>
+<p>An autonomous agent is governed. It can wake up, observe, decide, act, remember, communicate, and escalate within a durable role. Humans still own the system, but they control it through identity, tools, policy, schedules, memory, observability, and revocation rather than through constant prompting.</p>
+<p>That distinction matters because it changes how we design, evaluate, and trust agents. If an agent is commanded, the interface matters most. If an agent is autonomous, the operating model matters most.</p>
+<p>The future of useful autonomous agents is not unbounded machine freedom. It is governed discretion.</p>
+<hr />
+<h2 id="sources-and-further-reading">Sources and further reading</h2>
+<p>This paper is an interpretation of current agent research, standards work, and emerging practice. The sources below support pieces of the framework, but the commanded-versus-governed distinction is the paper&#039;s own synthesis.</p>
+<ul><li>Michael Wooldridge and Nicholas R. Jennings, 1995. <a href="https://biorobotics.ri.cmu.edu/papers/sbp_papers/integrated1/woodridge_intelligent_agents.pdf">Intelligent Agents: Theory and Practice</a>. Classic framing of agents around autonomy, social ability, reactivity, and pro-activeness.</li><li>Stan Franklin and Art Graesser, 1996. <a href="https://cse-robotics.engr.tamu.edu/dshell/cs631/papers/franklingraesser96agents.pdf">Is it an Agent, or just a Program?: A Taxonomy for Autonomous Agents</a>. Useful for the distinction between ordinary programs and situated agents that sense, act, and persist over time.</li><li>Lei Wang et al., 2023. <a href="https://arxiv.org/abs/2308.11432">A Survey on Large Language Model based Autonomous Agents</a>. Modern survey of LLM-based autonomous agents, including planning, memory, action, applications, and evaluation.</li><li>NIST, 2026. <a href="https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems">CAISI Issues Request for Information About Securing AI Agent Systems</a>. Useful for the security framing around planning, autonomous actions, real-world impact, and deployment controls.</li><li>NIST, 2025. <a href="https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems">Lessons Learned from the Consortium: Tool Use in Agent Systems</a>. Useful for tool-use taxonomies that include functionality, access patterns, risk, reliability, monitoring, and autonomy.</li><li>NIST, 2025. <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf">Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations</a>. Includes a section on the security of agents and the risks created when models plan and execute tool-mediated actions.</li><li>Agent2Agent Protocol Project. <a href="https://a2a-protocol.org/latest/specification/">A2A Protocol Specification</a>. Useful for grounding agent-to-agent communication in discovery, capability negotiation, task management, and secure information exchange.</li><li>Model Context Protocol. <a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol?</a>. Useful for grounding tool and external-system connectivity as a protocol layer rather than as the definition of autonomy.</li><li>OpenAI. <a href="https://openai.github.io/openai-agents-python/agents/">Agents SDK: Agents</a>. Useful for current implementation vocabulary around agents, tools, guardrails, handoffs, sessions, and orchestration.</li></ul>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Witwave publishes thinking on agent-native engineering and AI-assisted software systems.</p>
+      <a href="../../project/">Project</a>
+    </footer>
+  </body>
+</html>
