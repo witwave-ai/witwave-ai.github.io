@@ -68,7 +68,7 @@
                               "name": "Adoption"
                         }
                   ],
-                  "dateModified": "2026-05-14",
+                  "dateModified": "2026-05-22",
                   "mainEntityOfPage": "https://witwave.ai/whitepapers/three-phases-of-ai-adoption/"
             },
             {
@@ -99,7 +99,7 @@
     </script>
     <link rel="alternate" type="application/rss+xml" title="Witwave field notes" href="https://witwave.ai/feed.xml" />
     <link rel="icon" href="../../assets/images/witwave-logo-terminal.svg" />
-    <link rel="stylesheet" href="../../assets/styles.css?v=whitepaper-actions-20260521" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=paper-path-20260522" />
   </head>
   <body class="reader-page generated-page">
     <header class="site-header">
@@ -127,6 +127,7 @@
         
         <h1 id="the-three-phases-of-agentic-ai-adoption-in-software-engineering">The Three Phases of Agentic AI Adoption in Software Engineering</h1>
 <blockquote><p>A framework for understanding whether agents are being driven interactively by humans, delegated bounded work inside the old process, or integrated into the development lifecycle itself.</p></blockquote>
+<p><em>This is a living white paper. It is maintained as agent architectures, research, protocols, and operating patterns evolve.</em></p>
 <hr />
 <h2 id="executive-summary">Executive summary</h2>
 <p>Most engineering teams will soon be able to say they use agents. That alone will not mean they have transformed software delivery.</p>
@@ -207,6 +208,7 @@
 <p>Likewise, moving an agent from a laptop to the cloud or a Kubernetes cluster does not automatically make it more autonomous. Runtime location changes durability, scalability, isolation, observability, and governance options. Autonomy comes from the control model: what the agent is allowed to initiate, decide, modify, and ship without a human steering each step.</p>
 <p>The practical graduation is therefore:</p>
 <p><strong>session-bound tool -&gt; delegated worker -&gt; governed lifecycle participant.</strong></p>
+<p>Throughout this paper, Driven, Delegated, and Native describe adoption phases. Commanded and governed describe control models. A Phase 1 or Phase 2 agent can still be a real agent, but it usually remains commanded by the human-driven process around it. Phase 3 becomes credible when agents operate under durable identity, policy, activation, memory, observability, and escalation rather than moment-to-moment prompting.</p>
 <hr />
 <h2 id="phase-1-driven---interactive-agentic-development">Phase 1: Driven - Interactive Agentic Development</h2>
 <p>In Phase 1, the team is already using agents. The agent may inspect files, reason through a task, call tools, edit code, run tests, summarize logs, and iterate. What makes this Phase 1 is the control model: the human drives the loop from an IDE, editor, CLI, local shell, or chat session.</p>
@@ -306,6 +308,14 @@
 <ul><li><strong>Mostly yes to 1-4; mostly no afterward:</strong> Phase 1. Agents are interactive and human-driven.</li><li><strong>Yes to 5-8; mostly no to 9-21:</strong> Phase 2. Agents are delegated workers inside the old process.</li><li><strong>Yes to 9-21:</strong> Phase 3. Agents are integrated into the development lifecycle.</li><li><strong>Yes to 22-23, with strong evidence for 9-21:</strong> The team may be ready to explore the compounding layer.</li></ul>
 <p>Mixed signals are common. A team that has agents but no governed context, decision logs, quality gates, evals, observability, WIP controls, or lifecycle metrics is probably in Phase 2. A team that allows self-improvement without auditability is not advanced; it is exposed.</p>
 <hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>The most important distinction in AI adoption is not which tool a team buys. It is whether AI is integrated into the development lifecycle.</p>
+<p>In Phase 1, humans drive agents interactively inside their local development loop. In Phase 2, humans delegate bounded work to agents inside the old process. In Phase 3, the process itself changes so agents can participate safely and usefully in how software is planned, built, evaluated, checked, released, remembered, observed, and improved.</p>
+<p>The strategic mistake is assuming that more agent usage naturally produces Phase 3. It does not. Without product intent, context, evals, gates, rollback, logs, security boundaries, identity, platform support, WIP control, observability, and measurement, the organization gets more output without a reliably better system.</p>
+<p>For teams at Phase 2, the next step is not maximum autonomy. The next step is lifecycle integration: pick a narrow slice of work, make the intent and context available, define the gates, run the evals, log the decisions, observe the tool calls, measure the result, and keep the human role clear.</p>
+<p>The question for engineering leaders is therefore not only, &quot;Are we using AI?&quot; Most teams are, or soon will be.</p>
+<p>The better question is: <strong>where, exactly, is AI wired into our development lifecycle, and what controls make that wiring safe enough to trust?</strong></p>
+<hr />
 <h2 id="sources-and-further-reading">Sources and further reading</h2>
 <p>The framework in this paper is an interpretation of current practice and research, not a direct restatement of any one source. The sources below are grouped by evidence type so readers can separate established guidance from emerging work.</p>
 <h3 id="established-guidance-and-operating-model-research">Established guidance and operating-model research</h3>
@@ -317,14 +327,6 @@
 <h3 id="emerging-agentic-sdlc-and-self-improvement-research">Emerging agentic-SDLC and self-improvement research</h3>
 <p>These sources are useful signals, but many are recent preprints or early research artifacts. They should inform the framework without being treated as settled enterprise evidence.</p>
 <ul><li>Hao Li, Haoxiang Zhang, and Ahmed E. Hassan, <a href="https://arxiv.org/abs/2507.15003">The Rise of AI Teammates in Software Engineering</a>. Useful evidence that autonomous coding agents are operating in real repositories, while trust and utility gaps remain.</li><li>Happy Bhati, <a href="https://arxiv.org/abs/2604.26275">Agentic AI in the Software Development Lifecycle</a>. Useful as a recent synthesis of agentic SDLC concepts and open problems.</li><li>OWASP, <a href="https://owasp.org/www-project-agent-memory-guard/">Agent Memory Guard</a>. Useful as an emerging practical reference for memory poisoning risks and mitigations.</li><li>Noah Shinn et al., <a href="https://arxiv.org/abs/2303.11366">Reflexion</a>. Useful background for feedback-driven agent improvement.</li><li>Aman Madaan et al., <a href="https://arxiv.org/abs/2303.17651">Self-Refine</a>. Useful background for iterative agent refinement.</li><li>Guanzhi Wang et al., <a href="https://arxiv.org/abs/2305.16291">Voyager</a>. Useful background for skill libraries and compounding agent capability.</li></ul>
-<hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>The most important distinction in AI adoption is not which tool a team buys. It is whether AI is integrated into the development lifecycle.</p>
-<p>In Phase 1, humans drive agents interactively inside their local development loop. In Phase 2, humans delegate bounded work to agents inside the old process. In Phase 3, the process itself changes so agents can participate safely and usefully in how software is planned, built, evaluated, checked, released, remembered, observed, and improved.</p>
-<p>The strategic mistake is assuming that more agent usage naturally produces Phase 3. It does not. Without product intent, context, evals, gates, rollback, logs, security boundaries, identity, platform support, WIP control, observability, and measurement, the organization gets more output without a reliably better system.</p>
-<p>For teams at Phase 2, the next step is not maximum autonomy. The next step is lifecycle integration: pick a narrow slice of work, make the intent and context available, define the gates, run the evals, log the decisions, observe the tool calls, measure the result, and keep the human role clear.</p>
-<p>The question for engineering leaders is therefore not only, &quot;Are we using AI?&quot; Most teams are, or soon will be.</p>
-<p>The better question is: <strong>where, exactly, is AI wired into our development lifecycle, and what controls make that wiring safe enough to trust?</strong></p>
 <hr />
 <p><em>This framework describes patterns visible in AI-assisted and agent-native engineering work as of 2026. Phase boundaries are heuristic; teams in transition will show mixed signals. The framework is offered as a planning lens, not as a universal maturity model.</em></p>
       </article>
