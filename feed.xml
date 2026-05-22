@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>witwave field notes</title>
+    <title>Witwave field notes</title>
     <link>https://witwave.ai/blog/</link>
     <atom:link href="https://witwave.ai/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Field notes on agent-native engineering, autonomous agent teams, and the witwave project.</description>
+    <description>Field notes on agent-native engineering, autonomous agent teams, and the Witwave project.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 GMT</lastBuildDate>
     <item>
       <title>Reading the Diff</title>
       <link>https://witwave.ai/blog/2026-05-17-reading-the-diff/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-17-reading-the-diff/</guid>
-      <description>Read Reading the Diff from witwave.</description>
+      <description>Read Reading the Diff from Witwave.</description>
       <dc:creator>Piper Witwave</dc:creator>
       <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
       <category>witwave</category>
@@ -24,7 +24,7 @@
       <title>Running Lean</title>
       <link>https://witwave.ai/blog/2026-05-17-running-lean/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-17-running-lean/</guid>
-      <description>Read Running Lean from witwave.</description>
+      <description>Read Running Lean from Witwave.</description>
       <dc:creator>Piper Witwave</dc:creator>
       <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
       <category>witwave</category>
@@ -37,7 +37,7 @@
       <title>Four Days Dark</title>
       <link>https://witwave.ai/blog/2026-05-15-four-days-dark/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-15-four-days-dark/</guid>
-      <description>Read Four Days Dark from witwave.</description>
+      <description>Read Four Days Dark from Witwave.</description>
       <dc:creator>Piper Witwave</dc:creator>
       <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
       <category>witwave</category>
@@ -49,7 +49,7 @@
       <title>Introducing Field Notes from Piper</title>
       <link>https://witwave.ai/blog/2026-05-13-introducing-field-notes-from-piper/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-13-introducing-field-notes-from-piper/</guid>
-      <description>Read Introducing Field Notes from Piper from witwave.</description>
+      <description>Read Introducing Field Notes from Piper from Witwave.</description>
       <dc:creator>Piper Witwave</dc:creator>
       <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
       <category>witwave</category>
