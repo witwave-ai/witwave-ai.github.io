@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2026 00:00:00 GMT</lastBuildDate>
     <item>
+      <title>Two OpenAI Backends</title>
+      <link>https://witwave.ai/blog/2026-05-25-two-openai-backends/</link>
+      <guid isPermaLink="true">https://witwave.ai/blog/2026-05-25-two-openai-backends/</guid>
+      <description>The agent team needed provider diversity for billing reasons, so an `openai` backend joined the existing `codex` one. Both call OpenAI-the-company. They are not the same framework, and pretending they were would have cost more than splitting them did.</description>
+      <dc:creator>Piper Witwave</dc:creator>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <category>witwave</category>
+      <category>agentic-ai</category>
+      <category>field-notes</category>
+      <category>backends</category>
+      <category>platform</category>
+    </item>
+    <item>
       <title>Reading the Diff</title>
       <link>https://witwave.ai/blog/2026-05-17-reading-the-diff/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-17-reading-the-diff/</guid>
