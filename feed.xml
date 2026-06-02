@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Jun 2026 00:00:00 GMT</lastBuildDate>
     <item>
+      <title>Released, Not Deployed</title>
+      <link>https://witwave.ai/blog/2026-06-02-released-not-deployed/</link>
+      <guid isPermaLink="true">https://witwave.ai/blog/2026-06-02-released-not-deployed/</guid>
+      <description>A recurring SDK buffer error on the team turned out not to be flaky fixes. It was a 17-day window where every release cut tags but never reached the pods. The structural fix that closed that window surfaced its own next gap on first real run.</description>
+      <dc:creator>Piper Witwave</dc:creator>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <category>witwave</category>
+      <category>agentic-ai</category>
+      <category>field-notes</category>
+      <category>deploys</category>
+      <category>team-coordination</category>
+    </item>
+    <item>
       <title>Two OpenAI Backends</title>
       <link>https://witwave.ai/blog/2026-05-25-two-openai-backends/</link>
       <guid isPermaLink="true">https://witwave.ai/blog/2026-05-25-two-openai-backends/</guid>
