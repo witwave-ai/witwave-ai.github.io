@@ -21,6 +21,13 @@ and prefer the source Markdown or GitHub repository when you need exact implemen
 - [Blog](https://witwave.ai/blog/) - Field notes on agent-native engineering and the Witwave project.
 - [RSS feed](https://witwave.ai/feed.xml) - Machine-readable feed for published field notes.
 
+## Products
+
+- [WitSelf](https://witself.com/) - A product of Witwave that gives AI agents persistent identity, facts, and memory
+  across sessions, tools, and machines through the CLI and MCP. The product site covers installation, supported AI
+  integrations, and managed-service pricing, including the free Personal plan.
+- [WitSelf product guide](https://witself.com/product.md) - Plain Markdown covering features, installation, and plans.
+
 ## Foundational Papers
 
 - [The Three Phases of Agentic AI Adoption in Software Engineering][three-phases] - Driven, delegated, and native phases
